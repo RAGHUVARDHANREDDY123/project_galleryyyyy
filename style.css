@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  height: 100%;
+}
+
+#taskList {
+  width: 250px;
+  background-color: #f0f0f0;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+#taskList button {
+  display: block;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  background-color: #ddd;
+  cursor: pointer;
+  text-align: left;
+  border-radius: 5px;
+}
+
+#taskList button:hover {
+  background-color: #ccc;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  padding: 0;
+}
+
+#contentFrame {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 0;
+  background: white;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+
+  #taskList {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  #taskList button {
+    flex: 1;
+    margin-right: 5px;
+  }
+}
